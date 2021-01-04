@@ -130,11 +130,27 @@
 					}
 				}
 			}
-<<<<<<< HEAD
 
-			
-=======
->>>>>>> 0eca7a08915a598493b6d3ab384983dc99e40aa2
+			&.use-middle {
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: calc(50% - #{_size(border-width) * 1});
+					width: _size(border-width);
+					height: 100%;
+					background: _palette(border);
+				}
+
+				ul {
+					li {
+						&.is-middle {
+							border-left: 0;
+						}
+					}
+				}
+			}
 		}
 
 		body.is-article-visible & {
@@ -235,6 +251,11 @@
 					}
 				}
 
+				&.use-middle {
+					&:after {
+						display: none;
+					}
+				}
 			}
 		}
 	}
